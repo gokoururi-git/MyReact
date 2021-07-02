@@ -1,5 +1,12 @@
 React造轮子计划！！！
 
+项目启动方法:
+
+```bash
+npm i
+npm run serve
+```
+
 2021/7/2:
 
   - 完善到Function组件的纯UI渲染
