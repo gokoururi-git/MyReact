@@ -1,0 +1,39 @@
+{
+  "name": "MyReact",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "@types/uuid": "^8.3.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "html-webpack-plugin": "^4.5.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-manifest-plugin": "^3.1.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode=production",
+    "serve": "webpack-dev-server --config webpack.config.js --mode=development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokoururi-git/MyReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokoururi-git/MyReact/issues"
+  },
+  "homepage": "https://github.com/gokoururi-git/MyReact#readme"
+}
