@@ -57,3 +57,9 @@ export type ReactElementType =
   | HTMLElementType
   | ClassComponentConstructor
   | FunctionComponent;
+
+
+export interface UseStateStore<T> {
+  state: T;
+  setState: (newState: T) => void;
+}

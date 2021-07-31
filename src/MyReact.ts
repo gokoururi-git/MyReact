@@ -1,3 +1,4 @@
+import { ReactState } from "./ReactState";
 import {
   Component,
   Props,
@@ -64,7 +65,36 @@ export function createElement(
   ) as JSX.Element;
 }
 
+export function useReducer() {}
+
+export function useState<T>(initState: T) {
+  const { stateStack, isInitializeFinished } = ReactState;
+  if (isInitializeFinished) {
+    return [
+      stateStack[currentIndex].state,
+      stateStack[currentIndex].setState,
+    ] as [T, (newState: T) => void];
+  }
+  const currentIndex = stateStack.length;
+  const setState = (newState: T): void => {
+    stateStack[currentIndex] = { state: newState, setState };
+  };
+  stateStack.push({
+    state: initState,
+    setState,
+  });
+  return [
+    stateStack[currentIndex].state,
+    stateStack[currentIndex].setState,
+  ] as [T, (newState: T) => void];
+}
+
+export function useEffect() {}
+
 export default {
   Component,
   createElement,
+  useState,
+  useEffect,
+  useReducer,
 };
